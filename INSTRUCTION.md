@@ -11,12 +11,20 @@
 
 2. How to validate the solution.
 
-    - Check logs for the `daemonset`:
+    - Check that DaemonSet pods was created.
 
-        kubectl get pods && kubectl logs <"daemonset's pod name">
+        kubectl -n mateapp get pods -l app=busybox-daemonset
 
-    - Check logs for the `cronjob`:
+    - Check logs for the DaemonSet:
 
-        kubectl get pods && kubectl logs <"cronjob's pod name">
+        kubectl -n mateapp logs <pod>
+
+    - Check that CronJob pods was created.
+
+        kubectl -n mateapp get pods -l app=todoapp-cronjob
+
+    - Check logs for the CronJob:
+
+        kubectl -n mateapp logs <pod>
 
 
