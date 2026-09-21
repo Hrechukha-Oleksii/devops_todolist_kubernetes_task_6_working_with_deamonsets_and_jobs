@@ -12,6 +12,9 @@ spec:
   jobTemplate:
     spec:
       template:
+        metadata:
+          labels:
+            app: todoapp-cronjob
         spec:
           containers:
           - name: todoapp-cronjob
